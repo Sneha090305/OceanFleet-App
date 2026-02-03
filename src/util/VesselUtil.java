@@ -12,6 +12,15 @@ public class VesselUtil {
         vesselList.add(vessel);
     }
 
+    public Vessel getVesselById(String vesselId) {
+        for (Vessel vessel : vesselList) {
+            if (vessel.getVesselId().equals(vesselId)) {
+                return vessel;
+            }
+        }
+        return null;
+    }
+
     public List<Vessel> getVesselList() {
         return vesselList;
     }
